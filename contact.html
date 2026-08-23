@@ -49,7 +49,7 @@
                         <div class="mini-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
                         <div>
                             <h4>Email</h4>
-                            <p>contact@anvira.com</p>
+                            <p>contact@anviralabs.com</p>
                         </div>
                     </div>
                     <div class="contact-info-item">
@@ -80,8 +80,13 @@
                 <form class="contact-form" id="contactForm">
                     <div id="formSuccess" class="form-success">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                        Thanks — your message has been noted. We'll be in touch within 1 business day.
+                        Thanks — your message has been sent. We'll be in touch within 1 business day.
                     </div>
+                    <div id="formError" class="form-success" style="background:var(--orange-tint);color:var(--orange-deep)">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                        Something went wrong sending your message. Please email <strong>contact@anviralabs.com</strong> directly.
+                    </div>
+                    <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Name</label>
@@ -113,7 +118,7 @@
                         <textarea id="message" name="message" rows="5" placeholder="Tell us about your project or challenge" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Send Message</button>
-                    <p class="form-note">This is a static site — messages aren't sent to a server yet. Email <strong>contact@anvira.com</strong> directly for now.</p>
+                    <p class="form-note">Submitting this form emails the team directly at contact@anviralabs.com.</p>
                 </form>
             </div>
         </div>
@@ -135,7 +140,7 @@
                     </div>
                     <div class="footer-col">
                         <h5>Get in touch</h5>
-                        <p>contact@anvira.com</p>
+                        <p>contact@anviralabs.com</p>
                         <p>Brampton, Ontario, Canada</p>
                         <p>Gurgaon, India</p>
                     </div>

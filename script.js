@@ -71,14 +71,49 @@ if (statEls.length) {
 }
 
 // Contact form (static site — no backend; confirms locally)
+const CONTACT_API_URL = 'https://raopef06le.execute-api.us-east-1.amazonaws.com/';
+
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const success = document.getElementById('formSuccess');
+    const errorBox = document.getElementById('formError');
+
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        const success = document.getElementById('formSuccess');
-        if (success) success.classList.add('show');
-        contactForm.reset();
-        if (success) success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        const payload = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            company: document.getElementById('company').value,
+            interest: document.getElementById('interest').value,
+            message: document.getElementById('message').value,
+            website: document.getElementById('website') ? document.getElementById('website').value : '' // honeypot
+        };
+
+        if (errorBox) errorBox.classList.remove('show');
+        const originalLabel = submitBtn ? submitBtn.textContent : '';
+        if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending…'; }
+
+        try {
+            const res = await fetch(CONTACT_API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+            if (!res.ok) throw new Error('Request failed');
+
+            if (success) success.classList.add('show');
+            contactForm.reset();
+            if (success) success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } catch (err) {
+            if (errorBox) {
+                errorBox.classList.add('show');
+                errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        } finally {
+            if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalLabel; }
+        }
     });
 }
 
