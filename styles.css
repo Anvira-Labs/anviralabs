@@ -454,61 +454,45 @@ h3 { font-size: 1.3rem; }
 .founder-contact-line span { color: var(--line-strong); }
 .founder-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 
-/* ---------- Résumé-style document sections ---------- */
-.resume-sheet {
-    max-width: 860px;
-    margin: 0 auto;
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 56px 60px;
-}
-.resume-section { padding: 34px 0; border-top: 1px solid var(--line); }
-.resume-section:first-child { padding-top: 0; border-top: none; }
-.resume-heading {
-    font-family: var(--font-mono);
-    font-size: .76rem;
-    font-weight: 600;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: var(--ink-40);
-    margin-bottom: 18px;
-}
-.resume-section .lede { font-size: 1.03rem; max-width: none; }
-.scope-line { display: flex; flex-wrap: wrap; gap: 10px; }
+/* ---------- Profile + scope card ---------- */
+.scope-card { border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; background: var(--paper); align-self: start; }
+.scope-card h4 { font-size: .82rem; font-family: var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-40); margin-bottom: 16px; }
+.scope-line { display: flex; flex-wrap: wrap; gap: 9px; }
 
-.tech-skills { display: grid; grid-template-columns: 190px 1fr; row-gap: 18px; column-gap: 24px; }
-.tech-skills dt { font-weight: 700; font-size: .92rem; }
-.tech-skills dd { color: var(--ink-70); font-size: .92rem; }
-
-.exp-item { padding: 22px 0; border-top: 1px solid var(--line); }
-.exp-item:first-child { padding-top: 0; border-top: none; }
-.exp-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
-.exp-role { font-size: 1.02rem; font-weight: 700; }
-.exp-period { font-family: var(--font-mono); font-size: .78rem; color: var(--ink-40); white-space: nowrap; }
-.exp-company { font-size: .87rem; color: var(--teal-deep); font-weight: 600; margin: 3px 0 10px; }
-.exp-bullets { display: flex; flex-direction: column; gap: 7px; }
-.exp-bullets li { font-size: .9rem; color: var(--ink-70); padding-left: 16px; position: relative; }
-.exp-bullets li::before { content: ''; position: absolute; left: 0; top: 8px; width: 6px; height: 1.5px; background: var(--teal); }
+/* ---------- Premium experience timeline ---------- */
+.timeline-pro { position: relative; padding-left: 36px; border-left: 2px solid var(--line); }
+.exp-item { position: relative; padding-bottom: 44px; }
+.exp-item:last-child { padding-bottom: 0; }
+.exp-item::before {
+    content: '';
+    position: absolute; left: -44px; top: 6px;
+    width: 13px; height: 13px; border-radius: 50%;
+    background: var(--grad);
+    border: 3px solid var(--paper);
+    box-shadow: 0 0 0 1px var(--line-strong);
+    transition: var(--fast);
+}
+.exp-item:hover::before { transform: scale(1.25); box-shadow: 0 0 0 1px var(--teal); }
+.exp-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; margin-bottom: 6px; }
+.exp-role { font-size: 1.28rem; font-weight: 800; letter-spacing: -0.01em; transition: var(--fast); }
+.exp-item:hover .exp-role { color: var(--teal-deep); }
+.exp-period {
+    font-family: var(--font-mono); font-size: .74rem; font-weight: 500;
+    color: var(--ink-60); white-space: nowrap;
+    background: var(--surface); border: 1px solid var(--line);
+    padding: 5px 11px; border-radius: 100px; margin-top: 3px;
+}
+.exp-company { font-size: .92rem; color: var(--teal-deep); font-weight: 600; margin-bottom: 14px; }
+.exp-bullets { display: flex; flex-direction: column; gap: 9px; }
+.exp-bullets li { font-size: .93rem; color: var(--ink-70); padding-left: 18px; position: relative; }
+.exp-bullets li::before { content: ''; position: absolute; left: 0; top: 9px; width: 7px; height: 1.5px; background: var(--orange); }
 
 .skill-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.skill-card { border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; background: var(--paper); }
+.skill-card { border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; background: var(--paper); transition: var(--med); }
+.skill-card:hover { border-color: var(--line-strong); transform: translateY(-4px); box-shadow: 0 24px 48px -24px rgba(16,19,26,.16); }
 .skill-card h4 { font-size: 1rem; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
 .skill-tag-dot { width: 8px; height: 8px; border-radius: 2px; background: var(--grad); flex-shrink: 0; }
 .skill-card p { font-size: .87rem; color: var(--ink-60); }
-
-.timeline { display: flex; flex-direction: column; }
-.tl-item {
-    display: grid; grid-template-columns: 180px 1fr;
-    gap: 28px;
-    padding: 26px 0;
-    border-top: 1px solid var(--line);
-}
-.tl-item:last-child { border-bottom: 1px solid var(--line); }
-.tl-period { font-family: var(--font-mono); font-size: .82rem; color: var(--ink-40); padding-top: 3px; }
-.tl-role { font-size: 1.05rem; font-weight: 700; margin-bottom: 3px; }
-.tl-company { font-size: .88rem; color: var(--teal-deep); font-weight: 600; margin-bottom: 10px; }
-.tl-highlight { font-size: .92rem; color: var(--ink-70); }
 
 .quote-block {
     border-left: 3px solid var(--orange);
@@ -609,11 +593,7 @@ h3 { font-size: 1.3rem; }
     .service-block { grid-template-columns: 1fr; gap: 24px; }
     .founder-teaser { grid-template-columns: 1fr; padding: 32px; }
     .founder-teaser img { max-width: 180px; }
-    .tl-item { grid-template-columns: 1fr; gap: 6px; }
     .footer-top { flex-direction: column; gap: 32px; }
-    .resume-sheet { padding: 40px 32px; }
-    .tech-skills { grid-template-columns: 1fr; row-gap: 5px; }
-    .tech-skills dt { margin-top: 12px; }
 }
 
 @media (max-width: 720px) {
@@ -634,6 +614,7 @@ h3 { font-size: 1.3rem; }
     .footer-bottom { flex-direction: column; gap: 14px; align-items: flex-start; }
     .page-hero, .founder-hero { padding-top: 140px; }
     .cta-band { padding: 48px 24px; }
-    .resume-sheet { padding: 32px 20px; }
-    .exp-period { order: -1; }
+    .timeline-pro { padding-left: 24px; }
+    .exp-item::before { left: -30px; }
+    .exp-role { font-size: 1.1rem; }
 }
