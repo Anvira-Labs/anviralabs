@@ -154,7 +154,12 @@ h3 { font-size: 1.3rem; }
     align-items: center;
     justify-content: space-between;
 }
-.logo-img { height: 30px; width: auto; }
+.logo { display: flex; align-items: center; flex-shrink: 0; }
+.logo-img {
+    height: clamp(24px, 1.3vw + 19px, 32px);
+    width: auto;
+    aspect-ratio: 749 / 224;
+}
 .nav-menu { display: flex; align-items: center; gap: 36px; }
 .nav-menu a {
     font-size: .93rem;
@@ -380,7 +385,7 @@ h3 { font-size: 1.3rem; }
 /* ---------- Footer ---------- */
 .footer { padding: 56px 0 32px; border-top: 1px solid var(--line); }
 .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; padding-bottom: 40px; }
-.footer-brand .logo-img { height: 26px; margin-bottom: 14px; }
+.footer-brand .logo-img { height: clamp(20px, 1vw + 15px, 26px); margin-bottom: 14px; }
 .footer-brand p { color: var(--ink-60); font-size: .9rem; max-width: 280px; }
 .footer-cols { display: flex; gap: 64px; }
 .footer-col h5 { font-family: var(--font-mono); font-size: .76rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-40); margin-bottom: 16px; }
