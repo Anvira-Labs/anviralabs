@@ -1,127 +1,133 @@
 // ============================================================
 // ANVIRA LABS — shared site behaviour
 // ============================================================
+document.documentElement.classList.add('js');
 
 // Mobile nav toggle
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-
-if (hamburger && navMenu) {
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
-
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            hamburger.classList.remove('active');
-        });
-    });
-}
-
-// Navbar background on scroll
-const navbar = document.querySelector('.navbar');
-if (navbar) {
-    const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 20);
-    onScroll();
-    window.addEventListener('scroll', onScroll);
-}
-
-// Reveal-on-scroll animations
-const revealEls = document.querySelectorAll('.reveal');
-if (revealEls.length) {
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry, i) => {
-            if (entry.isIntersecting) {
-                setTimeout(() => entry.target.classList.add('in'), (i % 4) * 80);
-                revealObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
-    revealEls.forEach(el => revealObserver.observe(el));
-}
-
-// Animated stat counters
-const animateCounter = (el, target, suffix, duration = 1400) => {
-    const start = performance.now();
-    const step = (now) => {
-        const progress = Math.min((now - start) / duration, 1);
-        const eased = 1 - Math.pow(1 - progress, 3);
-        el.textContent = Math.floor(eased * target) + suffix;
-        if (progress < 1) requestAnimationFrame(step);
-        else el.textContent = target + suffix;
-    };
-    requestAnimationFrame(step);
-};
-
-const statEls = document.querySelectorAll('.stat-num[data-count]');
-if (statEls.length) {
-    const statObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !entry.target.dataset.animated) {
-                entry.target.dataset.animated = 'true';
-                const target = parseInt(entry.target.dataset.count, 10);
-                const suffix = entry.target.dataset.suffix || '';
-                animateCounter(entry.target, target, suffix);
-            }
-        });
-    }, { threshold: 0.4 });
-    statEls.forEach(el => statObserver.observe(el));
-}
-
-// Contact form (static site — no backend; confirms locally)
-const CONTACT_API_URL = 'https://raopef06le.execute-api.us-east-1.amazonaws.com/';
-
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    const submitBtn = contactForm.querySelector('button[type="submit"]');
-    const success = document.getElementById('formSuccess');
-    const errorBox = document.getElementById('formError');
-
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        const payload = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            company: document.getElementById('company').value,
-            interest: document.getElementById('interest').value,
-            message: document.getElementById('message').value,
-            website: document.getElementById('website') ? document.getElementById('website').value : '' // honeypot
-        };
-
-        if (errorBox) errorBox.classList.remove('show');
-        const originalLabel = submitBtn ? submitBtn.textContent : '';
-        if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending…'; }
-
-        try {
-            const res = await fetch(CONTACT_API_URL, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
-            });
-            if (!res.ok) throw new Error('Request failed');
-
-            if (success) success.classList.add('show');
-            contactForm.reset();
-            if (success) success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        } catch (err) {
-            if (errorBox) {
-                errorBox.classList.add('show');
-                errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-        } finally {
-            if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalLabel; }
-        }
-    });
-}
-
-// Mark active nav link based on current page
-const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-document.querySelectorAll('.nav-menu a[href]').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-        link.classList.add('active');
+(function () {
+    var hamburger = document.querySelector('.hamburger');
+    var navMenu = document.querySelector('.nav-menu');
+    if (!hamburger || !navMenu) return;
+    function set(open) {
+        navMenu.classList.toggle('active', open);
+        hamburger.classList.toggle('active', open);
+        hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
     }
-});
+    hamburger.addEventListener('click', function () { set(!navMenu.classList.contains('active')); });
+    navMenu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { set(false); }); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+})();
+
+// Navbar border on scroll
+(function () {
+    var navbar = document.querySelector('.navbar');
+    if (!navbar) return;
+    var onScroll = function () { navbar.classList.toggle('scrolled', window.scrollY > 20); };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+})();
+
+// Reveal on scroll
+(function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!els.length) return;
+    if (!('IntersectionObserver' in window)) { els.forEach(function (el) { el.classList.add('in'); }); return; }
+    var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry, i) {
+            if (!entry.isIntersecting) return;
+            setTimeout(function () { entry.target.classList.add('in'); }, (i % 4) * 70);
+            io.unobserve(entry.target);
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(function (el) { io.observe(el); });
+})();
+
+// Theme preview switcher: only appears when the URL contains ?themes
+(function () {
+    var params = new URLSearchParams(window.location.search);
+    var keep = params.has('themes') || (function () { try { return sessionStorage.getItem('al-themes') === '1'; } catch (e) { return false; } })();
+    if (!keep) return;
+    try { sessionStorage.setItem('al-themes', '1'); } catch (e) {}
+    var names = { clarity: 'Clarity', midnight: 'Midnight', ember: 'Ember', aurora: 'Aurora' };
+    var bar = document.createElement('div');
+    bar.className = 'theme-switch';
+    bar.setAttribute('role', 'group');
+    bar.setAttribute('aria-label', 'Preview theme');
+    Object.keys(names).forEach(function (key) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.textContent = names[key];
+        b.setAttribute('aria-pressed', document.documentElement.getAttribute('data-theme') === key ? 'true' : 'false');
+        b.addEventListener('click', function () {
+            document.documentElement.setAttribute('data-theme', key);
+            try { sessionStorage.setItem('al-theme', key); } catch (e) {}
+            bar.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+        });
+        bar.appendChild(b);
+    });
+    document.body.appendChild(bar);
+})();
+
+// Mark the current page in the nav
+(function () {
+    var page = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-menu a[href]').forEach(function (a) {
+        if (a.getAttribute('href') === page) { a.classList.add('active'); a.setAttribute('aria-current', 'page'); }
+    });
+})();
+
+// Contact form, delivered by Web3Forms (same service as vipan.me).
+// Without JS it still posts as a normal HTML form. Success is only shown once the
+// service confirms delivery; on failure the visitor's text stays in the form.
+(function () {
+    var form = document.getElementById('contact-form');
+    if (!form) return;
+    var status = form.querySelector('.form-status');
+    var submit = form.querySelector('button[type="submit"]');
+    var topic = form.elements.topic;
+
+    // ?topic=... links (from service pages) arrive with the matching topic chosen.
+    var wanted = new URLSearchParams(window.location.search).get('topic');
+    if (wanted) {
+        Array.prototype.forEach.call(topic.options, function (o) { if (o.value === wanted) topic.value = wanted; });
+    }
+
+    function show(text, sent) {
+        status.hidden = false;
+        status.classList.toggle('is-success', !!sent);
+        status.textContent = text;
+        status.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.reportValidity()) return;
+        var label = submit.textContent;
+        var company = form.elements.company.value.trim();
+        var topicLabel = topic.options[topic.selectedIndex].text;
+        form.elements.subject.value = 'Anvira Labs enquiry: ' + topicLabel + (company ? ' (' + company + ')' : '');
+        var failed = 'Your message could not be sent. Please email ' + form.getAttribute('data-fallback') + ' instead. Your text is still in the form so you can copy it.';
+
+        submit.disabled = true;
+        submit.textContent = 'Sending...';
+        status.hidden = true;
+
+        fetch(form.action, { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(form) })
+            .then(function (res) {
+                return res.json().then(function (data) { return res.ok && data.success === true; });
+            })
+            .then(function (sent) {
+                if (sent) {
+                    form.reset();
+                    show('Thanks, your message has been sent. We will reply by email within one business day.', true);
+                } else {
+                    show(failed);
+                }
+            })
+            .catch(function () { show(failed); })
+            .then(function () {
+                submit.disabled = false;
+                submit.textContent = label;
+            });
+    });
+})();

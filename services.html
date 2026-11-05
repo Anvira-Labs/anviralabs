@@ -1,259 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="midnight">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services — Anvira Labs</title>
-    <meta name="description" content="AI enablement, operations automation, custom software, and fractional tech partnership — how Anvira Labs moves your technology forward.">
+    <meta name="theme-color" content="#0a0f17">
+    <meta name="color-scheme" content="dark">
+    <title>Services | Anvira Labs</title>
+    <meta name="description" content="Custom software, AI enablement, cloud and DevOps, and fractional CTO services from Anvira Labs.">
+    <meta property="og:title" content="Services | Anvira Labs">
+    <meta property="og:description" content="Custom software, AI enablement, cloud and DevOps, and fractional CTO services from Anvira Labs.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Anvira Labs">
+    <link rel="canonical" href="https://www.anviralabs.com/services.html">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2310131a'/%3E%3Cpath d='M32 12 14 48h8l4-8h12l4 8h8L32 12zm0 13 6 12H26l6-12z' fill='%230f7f93'/%3E%3Ccircle cx='47' cy='46' r='4' fill='%23d97730'/%3E%3C/svg%3E">
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=20261105h">
+    <script>
+        // Site theme. DEFAULT is what visitors see; ?theme=name previews another one.
+        (function () {
+            var DEFAULT = 'midnight', themes = ['clarity', 'midnight', 'ember', 'aurora'], t = DEFAULT;
+            try {
+                var q = new URLSearchParams(location.search).get('theme');
+                if (q && themes.indexOf(q) > -1) { t = q; sessionStorage.setItem('al-theme', q); }
+                else if (themes.indexOf(sessionStorage.getItem('al-theme')) > -1) t = sessionStorage.getItem('al-theme');
+            } catch (e) {}
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
 </head>
 <body>
-    <nav class="navbar">
+    <a class="skip" href="#main">Skip to content</a>
+    <nav class="navbar" aria-label="Main">
         <div class="nav-container">
-            <a href="index.html" class="logo"><img src="assets/logo/anvira_labs_logo.png" alt="Anvira Labs" class="logo-img"></a>
-            <ul class="nav-menu">
+            <a href="index.html" class="logo"><img src="assets/logo/anvira_labs_logo.png" alt="Anvira Labs" class="logo-img" width="749" height="224"></a>
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
+                <li><a href="work.html">Clients</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="founder.html">Founder</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="nav-right">
                 <a href="contact.html" class="btn btn-primary">Book a Call</a>
-                <div class="hamburger"><span></span><span></span><span></span></div>
+                <button class="hamburger" type="button" aria-label="Menu" aria-controls="nav-menu" aria-expanded="false"><span></span><span></span><span></span></button>
             </div>
         </div>
     </nav>
 
-    <section class="page-hero">
-        <div class="bg-circuit"></div>
-        <div class="container">
-            <div class="eyebrow">SERVICES</div>
-            <h1>Four ways we move your technology forward.</h1>
-            <p class="lede">Pick one, or all four — every engagement is run by the same operators who've built and scaled these systems firsthand.</p>
-        </div>
-    </section>
+    <main id="main">
+        <section class="page-hero">
+            <div class="container">
+                <div class="eyebrow">Services</div>
+                <h1>Four ways we move your technology forward</h1>
+                <p class="lede">Pick one, or combine them. Every engagement is scoped, priced and led by the same senior engineer.</p>
+            </div>
+        </section>
 
-    <section class="section">
-        <div class="container">
-
-            <div class="service-block reveal">
-                <div class="service-block-head">
-                    <div class="card-index">01 / AI ENABLEMENT</div>
-                    <h3>Turn AI ambition into production reality</h3>
-                    <p>We take generative AI from pilot to platform — integrated into real workflows, measured against real outcomes, not demo-day slides.</p>
-                    <div class="tags">
-                        <span class="tag">LLM Integration</span>
-                        <span class="tag">RAG</span>
-                        <span class="tag">Applied ML</span>
+        <section class="section tight">
+            <div class="container">
+                <div class="service reveal" id="custom-software">
+                    <div>
+                        <div class="num">01 / CUSTOM SOFTWARE</div>
+                        <h2>Websites, apps and platforms built to last</h2>
+                        <p>From a fast marketing website to a multi-tenant SaaS platform, we design, build and launch software that holds up as your business grows.</p>
+                        <p class="engagement"><strong>Typical engagement:</strong> fixed-scope project, or an embedded team working in your workflow</p>
+                        <p style="margin-top:20px"><a class="link-arrow" href="contact.html?topic=custom-software">Discuss this service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></p>
                     </div>
-                    <p class="form-note" style="margin-top:16px">Typical engagement: 4–6 week sprint, pilot → production</p>
+                    <div class="service-detail">
+                        <h4>What you get</h4>
+                        <ul class="check-list"><li>Business websites, web apps and mobile apps</li><li>SaaS platforms, dashboards and admin tools</li><li>APIs, payments and third-party integrations</li><li>Modernising or rescuing an existing codebase</li></ul>
+                        <h4>Founder track record</h4>
+                        <ul class="proof-list"><li>10x Kafka throughput across 13 topics, with no new infrastructure</li><li>13 production database upgrades with zero unplanned downtime</li><li>3x traffic spikes absorbed with no manual intervention</li></ul>
+                    </div>
                 </div>
-                <div class="service-cols">
+                <div class="service reveal" id="ai">
                     <div>
-                        <h5>What you get</h5>
-                        <ul>
-                            <li>LLM &amp; RAG-powered product features</li>
-                            <li>Generative AI content &amp; automation pipelines</li>
-                            <li>AI-assisted engineering rollout &amp; adoption programs</li>
-                            <li>Model evaluation, guardrails &amp; cost management</li>
-                        </ul>
+                        <div class="num">02 / AI ENABLEMENT</div>
+                        <h2>Take AI from demo to daily use</h2>
+                        <p>We add AI where it earns its keep: chat and search over your own content, content and image pipelines, and automation of repetitive work, with guardrails and cost controls built in.</p>
+                        <p class="engagement"><strong>Typical engagement:</strong> 4–6 week sprint from pilot to production</p>
+                        <p style="margin-top:20px"><a class="link-arrow" href="contact.html?topic=ai">Discuss this service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></p>
                     </div>
+                    <div class="service-detail">
+                        <h4>What you get</h4>
+                        <ul class="check-list"><li>LLM and RAG-powered product features</li><li>AI chat assistants and support automation</li><li>Content, catalogue and image pipelines</li><li>Model evaluation, guardrails and cost management</li></ul>
+                        <h4>Founder track record</h4>
+                        <ul class="proof-list"><li>Generative-AI workflows for 50,000+ e-commerce brands</li><li>Batch image and content pipelines processing 9M+ assets</li><li>AI-assisted engineering pilot saving 8.5 hours per engineer per week</li></ul>
+                    </div>
+                </div>
+                <div class="service reveal" id="cloud">
                     <div>
-                        <h5>Proven at</h5>
-                        <ul>
-                            <li>Generative-AI workflows for 50,000+ e-commerce brands</li>
-                            <li>Batch image &amp; content pipelines processing 9M+ assets</li>
-                            <li>15-engineer AI-assisted dev pilot — 8.5 hrs/engineer/week saved</li>
-                        </ul>
+                        <div class="num">03 / CLOUD, DEVOPS & COST</div>
+                        <h2>Faster releases, fewer incidents, lower bills</h2>
+                        <p>CI/CD, infrastructure as code and monitoring that remove toil, plus cloud-cost audits that cut spend without cutting capacity.</p>
+                        <p class="engagement"><strong>Typical engagement:</strong> 2–4 week fixed-fee audit, then a 30/60/90-day plan</p>
+                        <p style="margin-top:20px"><a class="link-arrow" href="contact.html?topic=cloud">Discuss this service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></p>
+                    </div>
+                    <div class="service-detail">
+                        <h4>What you get</h4>
+                        <ul class="check-list"><li>CI/CD pipelines and release automation</li><li>AWS infrastructure and Terraform</li><li>Monitoring, alerting and on-call setup</li><li>Cloud-cost audits and rightsizing</li></ul>
+                        <h4>Founder track record</h4>
+                        <ul class="proof-list"><li>+40% release velocity and −35% incidents</li><li>−22% AWS cost while keeping 99.95% uptime</li><li>CAD 200,000 a year saved in cloud spend without cutting capacity</li></ul>
+                    </div>
+                </div>
+                <div class="service reveal" id="cto">
+                    <div>
+                        <div class="num">04 / FRACTIONAL CTO & ADVISORY</div>
+                        <h2>Senior technology leadership, on demand</h2>
+                        <p>For founders who need someone on their side of the table: to set the architecture, hire the team, check estimates and keep delivery on track.</p>
+                        <p class="engagement"><strong>Typical engagement:</strong> 1–2 days a week retainer, scaling up for launches or due diligence</p>
+                        <p style="margin-top:20px"><a class="link-arrow" href="contact.html?topic=cto">Discuss this service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></p>
+                    </div>
+                    <div class="service-detail">
+                        <h4>What you get</h4>
+                        <ul class="check-list"><li>Fractional CTO and technology roadmap</li><li>Hiring, team structure and vendor selection</li><li>Architecture and code reviews on a cadence</li><li>Technical due diligence for investors</li></ul>
+                        <h4>Founder track record</h4>
+                        <ul class="proof-list"><li>Built a team from 0 to 15 engineers and launched in 4 months</li><li>Built a 25-engineer function from scratch</li><li>Led a 21-person technology organisation</li></ul>
+                    </div>
+                </div>
+                <p class="note">"Founder track record" results come from Vipan Kumar's earlier employee leadership roles (OnGrid, Dresma, Gigforce, SignCatch and others), not from Anvira Labs client projects. Full history at <a class="link-arrow" href="https://vipan.me/experience.html" target="_blank" rel="noopener">vipan.me</a>.</p>
+            </div>
+        </section>
+
+        <section class="section alt">
+            <div class="container">
+                <div class="section-head">
+                    <div class="eyebrow">How we work</div>
+                    <h2>A simple process, built for clarity</h2>
+                </div>
+        <ol class="steps">
+            <li class="step reveal"><div class="step-num">01</div><h3>Discover</h3><p>A free 30-minute call, then a short review of your product, systems and goals to find the highest-value starting point.</p></li>
+            <li class="step reveal"><div class="step-num">02</div><h3>Plan</h3><p>A clear scope, architecture, timeline and price before any code is written. No open-ended hourly surprises.</p></li>
+            <li class="step reveal"><div class="step-num">03</div><h3>Build</h3><p>Weekly releases you can see and test, with one point of contact and honest status updates.</p></li>
+            <li class="step reveal"><div class="step-num">04</div><h3>Support</h3><p>Documented, monitored systems handed over to your team, or ongoing support and improvements from ours.</p></li>
+        </ol>
+            </div>
+        </section>
+
+        <section class="section tight">
+            <div class="container">
+                <div class="cta-band reveal">
+                    <h2>Not sure which service fits?</h2>
+                    <p>Tell us where it hurts and we'll map it to the right engagement, or tell you if you don't need us.</p>
+                    <div class="hero-actions">
+                        <a href="contact.html" class="btn btn-light">Start a conversation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+                        <a href="https://calendly.com/contactvips/" class="btn btn-outline-light" target="_blank" rel="noopener">Book a call on Calendly</a>
                     </div>
                 </div>
             </div>
-
-            <div class="service-block reveal">
-                <div class="service-block-head">
-                    <div class="card-index">02 / OPERATIONS AUTOMATION</div>
-                    <h3>Automate the plumbing so your team ships faster</h3>
-                    <p>CI/CD, infrastructure, and observability that removes toil — so engineers spend time building, not firefighting.</p>
-                    <div class="tags">
-                        <span class="tag">DevOps / SRE</span>
-                        <span class="tag">FinOps</span>
-                        <span class="tag">CI/CD</span>
-                    </div>
-                    <p class="form-note" style="margin-top:16px">Typical engagement: 2–4 week fixed-scope audit → 30/60/90-day plan</p>
-                </div>
-                <div class="service-cols">
-                    <div>
-                        <h5>What you get</h5>
-                        <ul>
-                            <li>CI/CD pipelines &amp; release engineering</li>
-                            <li>Cloud infrastructure &amp; Terraform automation</li>
-                            <li>Observability, on-call &amp; incident reduction</li>
-                            <li>FinOps: cloud cost audits &amp; rightsizing</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h5>Proven at</h5>
-                        <ul>
-                            <li>+40% release velocity, −35% incidents at OnGrid</li>
-                            <li>−22% AWS cost with 99.95% uptime maintained</li>
-                            <li>CAD 200,000/yr saved without cutting capacity at Dresma</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="service-block reveal">
-                <div class="service-block-head">
-                    <div class="card-index">03 / CUSTOM SOFTWARE</div>
-                    <h3>Architecture built to survive scale</h3>
-                    <p>Multi-tenant SaaS, distributed systems, and cloud-native platforms — engineered for the traffic and complexity you'll hit next year, not just today.</p>
-                    <div class="tags">
-                        <span class="tag">Distributed Systems</span>
-                        <span class="tag">Cloud-Native</span>
-                        <span class="tag">Microservices</span>
-                    </div>
-                    <p class="form-note" style="margin-top:16px">Typical engagement: project-based build, or embedded with your team</p>
-                </div>
-                <div class="service-cols">
-                    <div>
-                        <h5>What you get</h5>
-                        <ul>
-                            <li>Multi-tenant SaaS platform architecture</li>
-                            <li>Event-driven &amp; microservices systems (Kafka, CDC)</li>
-                            <li>Database scaling &amp; zero-downtime migrations</li>
-                            <li>Kubernetes autoscaling &amp; reusable Terraform modules</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h5>Proven at</h5>
-                        <ul>
-                            <li>10x Kafka throughput across 13 topics, no new infra</li>
-                            <li>3x traffic spikes absorbed with zero manual intervention</li>
-                            <li>13 production database upgrades, zero unplanned downtime</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="service-block reveal">
-                <div class="service-block-head">
-                    <div class="card-index">04 / TECH PARTNERSHIP</div>
-                    <h3>Embedded leadership, on demand</h3>
-                    <p>Fractional CTO and hands-on engineering leadership for teams that need direction, not just delivery.</p>
-                    <div class="tags">
-                        <span class="tag">Fractional CTO</span>
-                        <span class="tag">Team Building</span>
-                        <span class="tag">Advisory</span>
-                    </div>
-                    <p class="form-note" style="margin-top:16px">Typical engagement: 1–2 days/week retainer, scales up during launches or diligence</p>
-                </div>
-                <div class="service-cols">
-                    <div>
-                        <h5>What you get</h5>
-                        <ul>
-                            <li>Fractional CTO / engineering leadership</li>
-                            <li>Hiring, org design &amp; performance systems</li>
-                            <li>Architecture &amp; code review on a cadence</li>
-                            <li>Technical due diligence for investors &amp; acquirers</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h5>Proven at</h5>
-                        <ul>
-                            <li>0→15 engineers and a 4-month launch at Gigforce</li>
-                            <li>Built 25-engineer function from scratch at SignCatch</li>
-                            <li>Led appraisals &amp; promotions for 35+ engineers across 2 orgs</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Process -->
-    <section class="section alt">
-        <div class="container">
-            <div class="section-head">
-                <div class="eyebrow">HOW WE WORK</div>
-                <h2>A process built for clarity, not ceremony</h2>
-            </div>
-            <div class="process">
-                <div class="process-step reveal">
-                    <div class="process-num">01</div>
-                    <h4>Discover</h4>
-                    <p>We audit your systems, team, and goals to find the highest-leverage starting point.</p>
-                </div>
-                <div class="process-step reveal">
-                    <div class="process-num">02</div>
-                    <h4>Architect</h4>
-                    <p>We design the platform, roadmap, and success metrics before writing a line of code.</p>
-                </div>
-                <div class="process-step reveal">
-                    <div class="process-num">03</div>
-                    <h4>Build</h4>
-                    <p>We ship in weekly increments, embedded in your workflow with full visibility.</p>
-                </div>
-                <div class="process-step reveal">
-                    <div class="process-num">04</div>
-                    <h4>Operate</h4>
-                    <p>We hand over documented, observable systems — or stay on to run them with you.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <div class="cta-band reveal">
-                <h2>Not sure which service fits?</h2>
-                <p>Tell us where it hurts — we'll map it to the right engagement.</p>
-                <div class="hero-actions">
-                    <a href="contact.html" class="btn btn-primary">Book a Free Call</a>
-                    <a href="founder.html" class="btn btn-secondary">Meet the Founder</a>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <img src="assets/logo/anvira_labs_logo.png" alt="Anvira Labs" class="logo-img">
-                    <p>A technology consulting and AI enablement partner — helping ambitious companies build, automate, and ship.</p>
+                    <img src="assets/logo/anvira_labs_logo.png" alt="Anvira Labs" class="logo-img" width="749" height="224" loading="lazy">
+                    <p>An Indian technology consulting and software company, working with clients in India, Canada and the US.</p>
                 </div>
-                <div class="footer-cols">
-                    <div class="footer-col">
-                        <h5>Company</h5>
-                        <a href="about.html">About</a>
-                        <a href="founder.html">Founder</a>
-                        <a href="services.html">Services</a>
-                    </div>
-                    <div class="footer-col">
-                        <h5>Get in touch</h5>
-                        <p>contact@anviralabs.com</p>
-                        <a href="https://linkedin.com/in/vipankverma" target="_blank" rel="noopener">LinkedIn</a>
-                        <p>Brampton, Ontario, Canada</p>
-                        <p>Gurgaon, India</p>
-                    </div>
+                <div class="footer-col">
+                    <h5>Company</h5>
+                    <a href="services.html">Services</a>
+                    <a href="work.html">Clients</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Get in touch</h5>
+                    <a href="mailto:contact@anviralabs.com">contact@anviralabs.com</a>
+                    <a href="mailto:vipan@anviralabs.com">vipan@anviralabs.com</a>
+                    <a href="mailto:ritika@anviralabs.com">ritika@anviralabs.com</a>
+                    <a href="https://calendly.com/contactvips/" target="_blank" rel="noopener">Book a call on Calendly</a>
+                    <a href="https://www.linkedin.com/in/vipankverma/" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Offices</h5>
+                    <p>Gurgaon, India</p>
+                    <p>Brampton, Ontario, Canada</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 Anvira Labs. All rights reserved.</p>
-                <div class="footer-bottom-links">
-                    <a href="contact.html">Contact</a>
-                    <a href="founder.html">Founder</a>
-                </div>
+                <p>&copy; 2026 Anvira Labs. All rights reserved.</p>
+                <p>Founder profile: <a href="https://vipan.me" target="_blank" rel="noopener">vipan.me</a></p>
             </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
+    <script src="script.js?v=20261105h"></script>
 </body>
 </html>

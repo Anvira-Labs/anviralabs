@@ -1,162 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="midnight">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact — Anvira Labs</title>
-    <meta name="description" content="Talk to Anvira Labs about AI enablement, operations automation, custom software, or a fractional tech partnership.">
+    <meta name="theme-color" content="#0a0f17">
+    <meta name="color-scheme" content="dark">
+    <title>Contact | Anvira Labs</title>
+    <meta name="description" content="Contact Anvira Labs: send a project enquiry, book a call or email contact@anviralabs.com.">
+    <meta property="og:title" content="Contact | Anvira Labs">
+    <meta property="og:description" content="Contact Anvira Labs: send a project enquiry, book a call or email contact@anviralabs.com.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Anvira Labs">
+    <link rel="canonical" href="https://www.anviralabs.com/contact.html">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2310131a'/%3E%3Cpath d='M32 12 14 48h8l4-8h12l4 8h8L32 12zm0 13 6 12H26l6-12z' fill='%230f7f93'/%3E%3Ccircle cx='47' cy='46' r='4' fill='%23d97730'/%3E%3C/svg%3E">
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=20261105h">
+    <script>
+        // Site theme. DEFAULT is what visitors see; ?theme=name previews another one.
+        (function () {
+            var DEFAULT = 'midnight', themes = ['clarity', 'midnight', 'ember', 'aurora'], t = DEFAULT;
+            try {
+                var q = new URLSearchParams(location.search).get('theme');
+                if (q && themes.indexOf(q) > -1) { t = q; sessionStorage.setItem('al-theme', q); }
+                else if (themes.indexOf(sessionStorage.getItem('al-theme')) > -1) t = sessionStorage.getItem('al-theme');
+            } catch (e) {}
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
 </head>
 <body>
-    <nav class="navbar">
+    <a class="skip" href="#main">Skip to content</a>
+    <nav class="navbar" aria-label="Main">
         <div class="nav-container">
-            <a href="index.html" class="logo"><img src="assets/logo/anvira_labs_logo.png" alt="Anvira Labs" class="logo-img"></a>
-            <ul class="nav-menu">
+            <a href="index.html" class="logo"><img src="assets/logo/anvira_labs_logo.png" alt="Anvira Labs" class="logo-img" width="749" height="224"></a>
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
+                <li><a href="work.html">Clients</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="founder.html">Founder</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="nav-right">
                 <a href="contact.html" class="btn btn-primary">Book a Call</a>
-                <div class="hamburger"><span></span><span></span><span></span></div>
+                <button class="hamburger" type="button" aria-label="Menu" aria-controls="nav-menu" aria-expanded="false"><span></span><span></span><span></span></button>
             </div>
         </div>
     </nav>
 
-    <section class="page-hero">
-        <div class="bg-circuit"></div>
-        <div class="container">
-            <div class="eyebrow">BOOK A CALL</div>
-            <h1>Let's talk — no pitch, just a straight answer.</h1>
-            <p class="lede">Fill this in and we'll set up a free 30-minute call. We'll tell you honestly what we'd do — and whether we're the right fit, even if the answer is "not us".</p>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container contact-layout">
-            <div class="reveal">
-                <h3>Get in touch</h3>
-                <p style="color:var(--ink-60);margin-top:12px">Whether it's AI enablement, operations automation, custom software, or a fractional tech partnership — we'll point you to the right next step.</p>
-
-                <div class="contact-info-list">
-                    <div class="contact-info-item">
-                        <div class="mini-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>contact@anviralabs.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-info-item">
-                        <div class="mini-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-                        <div>
-                            <h4>Locations</h4>
-                            <p>Brampton, Ontario, Canada<br>Gurgaon, India</p>
-                        </div>
-                    </div>
-                    <div class="contact-info-item">
-                        <div class="mini-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-                        <div>
-                            <h4>Response time</h4>
-                            <p>Within 1 business day</p>
-                        </div>
-                    </div>
-                    <div class="contact-info-item">
-                        <div class="mini-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9h16M9 4v16"/></svg></div>
-                        <div>
-                            <h4>LinkedIn</h4>
-                            <p><a href="https://linkedin.com/in/vipankverma" target="_blank" rel="noopener" style="color:var(--teal-deep);font-weight:600">linkedin.com/in/vipankverma</a></p>
-                        </div>
-                    </div>
-                </div>
+    <main id="main">
+        <section class="page-hero">
+            <div class="container">
+                <div class="eyebrow">Contact</div>
+                <h1>Let's talk about your project</h1>
+                <p class="lede">Send a short note or book a call. No pitch, just a straight answer on what we'd do and whether we're the right team for it.</p>
             </div>
+        </section>
 
-            <div class="reveal">
-                <form class="contact-form" id="contactForm">
-                    <div id="formSuccess" class="form-success">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                        Thanks — your message has been sent. We'll be in touch within 1 business day.
-                    </div>
-                    <div id="formError" class="form-success" style="background:var(--orange-tint);color:var(--orange-deep)">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                        Something went wrong sending your message. Please email <strong>contact@anviralabs.com</strong> directly.
-                    </div>
-                    <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="you@company.com" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="company">Company</label>
-                            <input type="text" id="company" name="company" placeholder="Company name">
-                        </div>
-                        <div class="form-group">
-                            <label for="interest">I'm interested in</label>
-                            <select id="interest" name="interest">
-                                <option>AI Enablement</option>
-                                <option>Operations Automation</option>
-                                <option>Custom Software</option>
-                                <option>Tech Partnership</option>
-                                <option>Something else</option>
+        <section class="section tight">
+            <div class="container contact-grid">
+                <div class="contact-info">
+                    <dl>
+                        <div><dt>Book a call</dt><dd><a href="https://calendly.com/contactvips/" target="_blank" rel="noopener">calendly.com/contactvips</a></dd></div>
+                        <div><dt>Email</dt><dd><a href="mailto:contact@anviralabs.com?subject=Project%20enquiry">contact@anviralabs.com</a><br><a href="mailto:vipan@anviralabs.com?subject=Project%20enquiry">vipan@anviralabs.com</a><br><a href="mailto:ritika@anviralabs.com?subject=Project%20enquiry">ritika@anviralabs.com</a></dd></div>
+                        <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/vipankverma/" target="_blank" rel="noopener">linkedin.com/in/vipankverma</a></dd></div>
+                        <div><dt>Offices</dt><dd>Gurgaon, India<br>Brampton, Ontario, Canada</dd></div>
+                        <div><dt>Response time</dt><dd>Within 1 business day</dd></div>
+                    </dl>
+                </div>
+
+                <div class="form-card">
+                    <h2>Send us a message</h2>
+                    <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST" data-fallback="contact@anviralabs.com, vipan@anviralabs.com or ritika@anviralabs.com">
+                        <input type="hidden" name="access_key" value="2db52a5c-e76e-46fc-81e2-e4c88a7192e3">
+                        <input type="hidden" name="subject" value="Enquiry from anviralabs.com">
+                        <input type="hidden" name="from_name" value="anviralabs.com contact form">
+                        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+                        <div class="field"><label for="cf-name">Name</label><input id="cf-name" name="name" type="text" autocomplete="name" required></div>
+                        <div class="field"><label for="cf-email">Business email</label><input id="cf-email" name="email" type="email" autocomplete="email" required></div>
+                        <div class="field"><label for="cf-company">Company <span>(optional)</span></label><input id="cf-company" name="company" type="text" autocomplete="organization"></div>
+                        <div class="field"><label for="cf-topic">What do you need help with?</label>
+                            <select id="cf-topic" name="topic" required>
+                                <option value="">Choose one</option>
+                                <option value="custom-software">Custom software, website or app</option>
+                                <option value="ai">AI enablement</option>
+                                <option value="cloud">Cloud, DevOps or cost reduction</option>
+                                <option value="cto">Fractional CTO or advisory</option>
+                                <option value="other">Something else</option>
                             </select>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your project or challenge" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Book My Free Call</button>
-                    <p class="form-note">Submitting this form emails contact@anviralabs.com directly — we'll reply to schedule the call.</p>
-                </form>
+                        <div class="field wide"><label for="cf-desc">Brief project description</label><textarea id="cf-desc" name="message" rows="5" maxlength="1500" required></textarea></div>
+                        <div class="field wide form-foot">
+                            <button class="btn btn-primary" type="submit">Start a conversation</button>
+                            <p class="form-note">Your message is delivered to our inbox through Web3Forms, a form service. We reply by email.</p>
+                        </div>
+                        <div class="form-status wide" role="status" aria-live="polite" hidden></div>
+                    </form>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <img src="assets/logo/anvira_labs_logo.png" alt="Anvira Labs" class="logo-img">
-                    <p>A technology consulting and AI enablement partner — helping ambitious companies build, automate, and ship.</p>
+                    <img src="assets/logo/anvira_labs_logo.png" alt="Anvira Labs" class="logo-img" width="749" height="224" loading="lazy">
+                    <p>An Indian technology consulting and software company, working with clients in India, Canada and the US.</p>
                 </div>
-                <div class="footer-cols">
-                    <div class="footer-col">
-                        <h5>Company</h5>
-                        <a href="about.html">About</a>
-                        <a href="founder.html">Founder</a>
-                        <a href="services.html">Services</a>
-                    </div>
-                    <div class="footer-col">
-                        <h5>Get in touch</h5>
-                        <p>contact@anviralabs.com</p>
-                        <a href="https://linkedin.com/in/vipankverma" target="_blank" rel="noopener">LinkedIn</a>
-                        <p>Brampton, Ontario, Canada</p>
-                        <p>Gurgaon, India</p>
-                    </div>
+                <div class="footer-col">
+                    <h5>Company</h5>
+                    <a href="services.html">Services</a>
+                    <a href="work.html">Clients</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Get in touch</h5>
+                    <a href="mailto:contact@anviralabs.com">contact@anviralabs.com</a>
+                    <a href="mailto:vipan@anviralabs.com">vipan@anviralabs.com</a>
+                    <a href="mailto:ritika@anviralabs.com">ritika@anviralabs.com</a>
+                    <a href="https://calendly.com/contactvips/" target="_blank" rel="noopener">Book a call on Calendly</a>
+                    <a href="https://www.linkedin.com/in/vipankverma/" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Offices</h5>
+                    <p>Gurgaon, India</p>
+                    <p>Brampton, Ontario, Canada</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 Anvira Labs. All rights reserved.</p>
-                <div class="footer-bottom-links">
-                    <a href="contact.html">Contact</a>
-                    <a href="founder.html">Founder</a>
-                </div>
+                <p>&copy; 2026 Anvira Labs. All rights reserved.</p>
+                <p>Founder profile: <a href="https://vipan.me" target="_blank" rel="noopener">vipan.me</a></p>
             </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
+    <script src="script.js?v=20261105h"></script>
 </body>
 </html>

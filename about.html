@@ -1,158 +1,215 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="midnight">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About — Anvira Labs</title>
-    <meta name="description" content="Anvira Labs is built by operators who've run engineering organizations, not consultants who've only advised them.">
+    <meta name="theme-color" content="#0a0f17">
+    <meta name="color-scheme" content="dark">
+    <title>About | Anvira Labs</title>
+    <meta name="description" content="Anvira Labs is a family-run Indian technology company founded by Vipan Kumar, with offices in Gurgaon, India and Brampton, Ontario, Canada.">
+    <meta property="og:title" content="About | Anvira Labs">
+    <meta property="og:description" content="Anvira Labs is a family-run Indian technology company founded by Vipan Kumar, with offices in Gurgaon, India and Brampton, Ontario, Canada.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Anvira Labs">
+    <link rel="canonical" href="https://www.anviralabs.com/about.html">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2310131a'/%3E%3Cpath d='M32 12 14 48h8l4-8h12l4 8h8L32 12zm0 13 6 12H26l6-12z' fill='%230f7f93'/%3E%3Ccircle cx='47' cy='46' r='4' fill='%23d97730'/%3E%3C/svg%3E">
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=20261105h">
+    <script>
+        // Site theme. DEFAULT is what visitors see; ?theme=name previews another one.
+        (function () {
+            var DEFAULT = 'midnight', themes = ['clarity', 'midnight', 'ember', 'aurora'], t = DEFAULT;
+            try {
+                var q = new URLSearchParams(location.search).get('theme');
+                if (q && themes.indexOf(q) > -1) { t = q; sessionStorage.setItem('al-theme', q); }
+                else if (themes.indexOf(sessionStorage.getItem('al-theme')) > -1) t = sessionStorage.getItem('al-theme');
+            } catch (e) {}
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
 </head>
 <body>
-    <nav class="navbar">
+    <a class="skip" href="#main">Skip to content</a>
+    <nav class="navbar" aria-label="Main">
         <div class="nav-container">
-            <a href="index.html" class="logo"><img src="assets/logo/anvira_labs_logo.png" alt="Anvira Labs" class="logo-img"></a>
-            <ul class="nav-menu">
+            <a href="index.html" class="logo"><img src="assets/logo/anvira_labs_logo.png" alt="Anvira Labs" class="logo-img" width="749" height="224"></a>
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
+                <li><a href="work.html">Clients</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="founder.html">Founder</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="nav-right">
                 <a href="contact.html" class="btn btn-primary">Book a Call</a>
-                <div class="hamburger"><span></span><span></span><span></span></div>
+                <button class="hamburger" type="button" aria-label="Menu" aria-controls="nav-menu" aria-expanded="false"><span></span><span></span><span></span></button>
             </div>
         </div>
     </nav>
 
-    <section class="page-hero">
-        <div class="bg-circuit"></div>
-        <div class="container">
-            <div class="eyebrow">ABOUT ANVIRA LABS</div>
-            <h1>Built by operators who've run the show.</h1>
-            <p class="lede">Not consultants who've only advised it. We're a technology consulting and AI enablement partner founded on the belief that the best advice comes from people who've shipped the systems themselves.</p>
-        </div>
-    </section>
+    <main id="main">
+        <section class="page-hero">
+            <div class="container">
+                <div class="eyebrow">About Anvira Labs</div>
+                <h1>A family-run technology company, built by engineers</h1>
+                <p class="lede">Anvira Labs is an Indian company co-founded by Vipan Kumar and Ritika Angrish to give growing businesses the kind of senior engineering usually reserved for large companies.</p>
+            </div>
+        </section>
 
-    <section class="section">
-        <div class="container about-story">
-            <div class="reveal">
-                <p class="lede">Anvira Labs exists because most companies don't need another slide deck — they need someone who has actually run the engineering org, owned the cloud bill, and been on-call at 2am.</p>
-                <p>We're a technology services organization specializing in AI enablement, operations automation, and custom software — built around operators with 15 years of hands-on leadership across cloud platforms, distributed systems, and applied AI.</p>
-                <p>Our approach combines deep technical execution with business judgment: we don't just recommend the right architecture, we build it, ship it, and stay accountable for how it performs in production.</p>
-                <div class="stat-strip" style="margin-top:40px">
-                    <div class="stat">
-                        <div class="stat-num" data-count="20" data-suffix="+">0+</div>
-                        <div class="stat-label">Projects delivered</div>
+        <section class="section tight">
+            <div class="container">
+                <div class="grid-2">
+                    <div class="reveal">
+                        <p class="lede">Most businesses don't need another slide deck. They need someone who has run an engineering team, owned the cloud bill and fixed production at 2am, and who will build the thing, not just recommend it.</p>
                     </div>
-                    <div class="stat">
-                        <div class="stat-num" data-count="10" data-suffix="+">0+</div>
-                        <div class="stat-label">Happy clients</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-num" data-count="4" data-suffix="">0</div>
-                        <div class="stat-label">Tech orgs built from scratch</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-num" data-count="24" data-suffix="/7">0/7</div>
-                        <div class="stat-label">Support &amp; monitoring</div>
+                    <div class="reveal">
+                        <p>We're a small, senior team based in Gurgaon, India, with a presence in Brampton, Ontario, Canada. We work with startups and established companies on websites, apps, cloud platforms and AI, and we stay accountable for how what we build performs in production.</p>
+                        <p style="margin-top:14px">Being small is deliberate: you talk to the people doing the work, decisions are fast, and nothing gets lost between sales and delivery.</p>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="about-principles reveal">
-                <div class="mini-card">
-                    <div class="mini-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <section class="section alt" id="team">
+            <div class="container">
+                <div class="section-head">
+                    <div class="eyebrow">The team</div>
+                    <h2>Meet the founders</h2>
+                </div>
+            <div class="grid-2">
+                <article class="card team-card reveal" id="vipan">
+                    <img class="team-photo" src="assets/founder/vipan-kumar.jpg" alt="Vipan Kumar" width="112" height="112" loading="lazy">
                     <div>
-                        <h4>Speed with discipline</h4>
-                        <p>Weekly releases, strong CI/CD, and clear production ownership — never speed at the cost of stability.</p>
+                        <div class="role">Founder · Technology Lead</div>
+                        <h3>Vipan Kumar</h3>
+                        <p>15+ years building software products, cloud platforms and engineering teams. Leads architecture and delivery on every Anvira Labs engagement.</p>
+                        <p class="muted">Hands-on with AWS, distributed systems, Java, Kafka, Kubernetes, Terraform and applied AI.</p>
+                        <div class="team-links">
+                            <a class="link-arrow" href="https://vipan.me" target="_blank" rel="noopener">vipan.me <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+                            <a class="link-arrow" href="https://www.linkedin.com/in/vipankverma/" target="_blank" rel="noopener">LinkedIn <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+                        </div>
                     </div>
-                </div>
-                <div class="mini-card">
-                    <div class="mini-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>
+                </article>
+                <article class="card team-card reveal" id="cofounder">
+                    <img class="team-photo" src="assets/founder/ritika-angrish.jpg" alt="Ritika Angrish" width="112" height="112" loading="lazy">
                     <div>
-                        <h4>Outcomes over output</h4>
-                        <p>We measure ourselves on velocity gained, cost cut, and incidents avoided — not hours billed.</p>
+                        <div class="role">Co-founder · Engineering</div>
+                        <h3>Ritika Angrish</h3>
+                        <p>15 years in embedded and telecom software, building Layer 2 networking protocols such as G.8032 ring protection, CFM and QoS for carrier-grade switches, from design and development to resolving customer issues.</p>
+                        <p class="muted">Skilled in C, Linux, SNMP and Broadcom switching chipsets. Certified parenting coach. Alumna of Thapar Institute of Engineering and Technology, based in Gurugram.</p>
+                        <div class="team-links">
+                            <a class="link-arrow" href="mailto:ritika@anviralabs.com">ritika@anviralabs.com</a>
+                            <a class="link-arrow" href="https://www.linkedin.com/in/ritika-angrish/" target="_blank" rel="noopener">LinkedIn <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div class="eyebrow">Founder track record</div>
+                    <h2>Experience behind every engagement</h2>
+                    <p>Before Anvira Labs, Vipan led engineering at product companies in India and Canada.</p>
+                </div>
+                <div class="record">
+                    <div class="fact reveal"><div class="fact-num">15+</div><div class="fact-label">Years building software and teams</div></div>
+                    <div class="fact reveal"><div class="fact-num">21</div><div class="fact-label">Person technology org led at OnGrid</div></div>
+                    <div class="fact reveal"><div class="fact-num">+40%</div><div class="fact-label">Release velocity gained at OnGrid</div></div>
+                    <div class="fact reveal"><div class="fact-num">−22%</div><div class="fact-label">AWS cost cut at 99.95% uptime</div></div>
+                </div>
+                <p class="note">These figures come from Vipan's employee roles at OnGrid, Dresma, Gigforce, SignCatch, Domino's (Jubilant FoodWorks), Lenskart and Samsung R&amp;D. Those companies were employers, not Anvira Labs clients. Full career history: <a class="link-arrow" href="https://vipan.me/experience.html" target="_blank" rel="noopener">vipan.me</a>.</p>
+            </div>
+        </section>
+
+        <section class="section alt" id="experience">
+            <div class="container">
+                <div class="section-head">
+                    <div class="eyebrow">Where we've worked</div>
+                    <h2>Experience from full-time roles</h2>
+                    <p>Before and alongside Anvira Labs, the founders spent their careers as full-time engineers and engineering leaders at these companies. They were our employers, not Anvira Labs clients.</p>
+                </div>
+                <ul class="employer-wall">
+                    <li class="employer reveal"><div class="emp-logo "><img src="assets/employers/ciena.png" alt="Ciena logo" loading="lazy"></div><strong>Ciena</strong><span class="emp-sector">Optical & packet networking</span><span class="emp-who">Ritika · Embedded Software Engineer · 2014–present</span></li>
+                    <li class="employer reveal"><div class="emp-logo "><img src="assets/employers/ongrid.svg" alt="OnGrid logo" loading="lazy"></div><strong>OnGrid</strong><span class="emp-sector">Background-verification SaaS</span><span class="emp-who">Vipan · Associate Director of Engineering</span></li>
+                    <li class="employer reveal"><div class="emp-logo dark"><img src="assets/employers/dresma.png" alt="Dresma logo" loading="lazy"></div><strong>Dresma</strong><span class="emp-sector">AI product-content SaaS</span><span class="emp-who">Vipan · Technical Architect & Lead Engineering Manager</span></li>
+                    <li class="employer reveal"><div class="emp-logo "><img src="assets/employers/gigforce.png" alt="Gigforce logo" loading="lazy"></div><strong>Gigforce</strong><span class="emp-sector">Gig-workforce marketplace</span><span class="emp-who">Vipan · Senior Software Architect</span></li>
+                    <li class="employer reveal"><div class="emp-logo dark"><img src="assets/employers/signcatch.png" alt="SignCatch logo" loading="lazy"></div><strong>SignCatch</strong><span class="emp-sector">Retail-commerce platform</span><span class="emp-who">Vipan · Technology Head</span></li>
+                    <li class="employer reveal"><div class="emp-logo "><img src="assets/employers/dominos.png" alt="Domino's India logo" loading="lazy"></div><strong>Domino's India</strong><span class="emp-sector">Jubilant FoodWorks</span><span class="emp-who">Vipan · Lead Software Scientist</span></li>
+                    <li class="employer reveal"><div class="emp-logo "><img src="assets/employers/koovs.webp" alt="Koovs logo" loading="lazy"></div><strong>Koovs</strong><span class="emp-sector">Fashion e-commerce</span><span class="emp-who">Vipan · Technical Lead</span></li>
+                    <li class="employer reveal"><div class="emp-logo dark"><img src="assets/employers/lenskart.svg" alt="Lenskart logo" loading="lazy"></div><strong>Lenskart</strong><span class="emp-sector">Eyewear commerce</span><span class="emp-who">Vipan · Technical Lead</span></li>
+                    <li class="employer reveal"><div class="emp-logo "><img src="assets/employers/samsung-research.png" alt="Samsung RandD logo" loading="lazy"></div><strong>Samsung R&amp;D</strong><span class="emp-sector">Tizen browser &amp; graphics</span><span class="emp-who">Vipan · Software Scientist</span></li>
+                    <li class="employer reveal"><div class="emp-logo "><img src="assets/employers/aricent.png" alt="Aricent logo" loading="lazy"></div><strong>Aricent</strong><span class="emp-sector">Telecom software</span><span class="emp-who">Vipan &amp; Ritika · Software Engineers</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div class="eyebrow">How we operate</div>
+                    <h2>What you can expect from us</h2>
+                </div>
+                <div class="grid-3">
+                    <div class="card value reveal"><h3>Straight answers</h3><p>Clear scope and price up front. If we're not the right fit, we'll say so on the first call.</p></div>
+                    <div class="card value reveal"><h3>Outcomes over hours</h3><p>We measure ourselves on what ships, what it costs to run and how reliably it works.</p></div>
+                    <div class="card value reveal"><h3>Partnership, not hand-offs</h3><p>We document what we build, train your team and stay available after launch.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section tight">
+            <div class="container">
+                <div class="cta-band reveal">
+                    <h2>Have a project in mind?</h2>
+                    <p>Tell us what you're building or what's not working. We'll reply within one business day, and we'll tell you honestly if we're not the right fit.</p>
+                    <div class="hero-actions">
+                        <a href="contact.html" class="btn btn-light">Start a conversation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+                        <a href="https://calendly.com/contactvips/" class="btn btn-outline-light" target="_blank" rel="noopener">Book a call on Calendly</a>
                     </div>
                 </div>
-                <div class="mini-card">
-                    <div class="mini-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-                    <div>
-                        <h4>Partnership, not projects</h4>
-                        <p>We embed with your team, transfer knowledge, and stay accountable long after launch.</p>
-                    </div>
-                </div>
             </div>
-        </div>
-    </section>
-
-    <section class="section alt">
-        <div class="container">
-            <div class="section-head center">
-                <div class="eyebrow" style="justify-content:center">TRACK RECORD</div>
-                <h2>Experience that spans startup zero-to-one and enterprise scale</h2>
-            </div>
-            <ul class="timeline-mini" style="max-width:760px;margin:0 auto;border-left:none;padding-left:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 40px">
-                <li style="padding-left:24px;position:relative"><span style="position:absolute;left:0;top:5px;width:8px;height:8px;border-radius:50%;background:var(--teal)"></span>Background-verification SaaS for regulated banking clients</li>
-                <li style="padding-left:24px;position:relative"><span style="position:absolute;left:0;top:5px;width:8px;height:8px;border-radius:50%;background:var(--teal)"></span>AI-powered content SaaS for 50,000+ e-commerce brands</li>
-                <li style="padding-left:24px;position:relative"><span style="position:absolute;left:0;top:5px;width:8px;height:8px;border-radius:50%;background:var(--teal)"></span>Gig-workforce marketplace across 30+ cities</li>
-                <li style="padding-left:24px;position:relative"><span style="position:absolute;left:0;top:5px;width:8px;height:8px;border-radius:50%;background:var(--teal)"></span>Omnichannel retail-commerce &amp; POS platform</li>
-                <li style="padding-left:24px;position:relative"><span style="position:absolute;left:0;top:5px;width:8px;height:8px;border-radius:50%;background:var(--teal)"></span>National ordering platform for 4,000+ restaurant outlets</li>
-                <li style="padding-left:24px;position:relative"><span style="position:absolute;left:0;top:5px;width:8px;height:8px;border-radius:50%;background:var(--teal)"></span>Consumer e-commerce at 10,000+ concurrent orders</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <div class="cta-band reveal">
-                <h2>Want the full story?</h2>
-                <p>Meet the operator leading every engagement at Anvira Labs.</p>
-                <div class="hero-actions">
-                    <a href="founder.html" class="btn btn-primary">Meet the Founder</a>
-                    <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <img src="assets/logo/anvira_labs_logo.png" alt="Anvira Labs" class="logo-img">
-                    <p>A technology consulting and AI enablement partner — helping ambitious companies build, automate, and ship.</p>
+                    <img src="assets/logo/anvira_labs_logo.png" alt="Anvira Labs" class="logo-img" width="749" height="224" loading="lazy">
+                    <p>An Indian technology consulting and software company, working with clients in India, Canada and the US.</p>
                 </div>
-                <div class="footer-cols">
-                    <div class="footer-col">
-                        <h5>Company</h5>
-                        <a href="about.html">About</a>
-                        <a href="founder.html">Founder</a>
-                        <a href="services.html">Services</a>
-                    </div>
-                    <div class="footer-col">
-                        <h5>Get in touch</h5>
-                        <p>contact@anviralabs.com</p>
-                        <a href="https://linkedin.com/in/vipankverma" target="_blank" rel="noopener">LinkedIn</a>
-                        <p>Brampton, Ontario, Canada</p>
-                        <p>Gurgaon, India</p>
-                    </div>
+                <div class="footer-col">
+                    <h5>Company</h5>
+                    <a href="services.html">Services</a>
+                    <a href="work.html">Clients</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Get in touch</h5>
+                    <a href="mailto:contact@anviralabs.com">contact@anviralabs.com</a>
+                    <a href="mailto:vipan@anviralabs.com">vipan@anviralabs.com</a>
+                    <a href="mailto:ritika@anviralabs.com">ritika@anviralabs.com</a>
+                    <a href="https://calendly.com/contactvips/" target="_blank" rel="noopener">Book a call on Calendly</a>
+                    <a href="https://www.linkedin.com/in/vipankverma/" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Offices</h5>
+                    <p>Gurgaon, India</p>
+                    <p>Brampton, Ontario, Canada</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 Anvira Labs. All rights reserved.</p>
-                <div class="footer-bottom-links">
-                    <a href="contact.html">Contact</a>
-                    <a href="founder.html">Founder</a>
-                </div>
+                <p>&copy; 2026 Anvira Labs. All rights reserved.</p>
+                <p>Founder profile: <a href="https://vipan.me" target="_blank" rel="noopener">vipan.me</a></p>
             </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
+    <script src="script.js?v=20261105h"></script>
 </body>
 </html>

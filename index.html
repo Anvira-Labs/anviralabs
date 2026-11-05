@@ -1,237 +1,260 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="midnight">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anvira Labs — Tech Consulting & AI Enablement Partner</title>
-    <meta name="description" content="Anvira Labs is a technology consulting and AI enablement partner. We architect platforms, automate operations, and ship custom software for companies building what's next.">
+    <meta name="theme-color" content="#0a0f17">
+    <meta name="color-scheme" content="dark">
+    <title>Anvira Labs | Technology Consulting, Software & AI</title>
+    <meta name="description" content="Anvira Labs is an Indian technology consulting and software company building websites, apps, cloud platforms and AI features for clients in India, Canada and the US.">
+    <meta property="og:title" content="Anvira Labs | Technology Consulting, Software & AI">
+    <meta property="og:description" content="Anvira Labs is an Indian technology consulting and software company building websites, apps, cloud platforms and AI features for clients in India, Canada and the US.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Anvira Labs">
+    <link rel="canonical" href="https://www.anviralabs.com/">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2310131a'/%3E%3Cpath d='M32 12 14 48h8l4-8h12l4 8h8L32 12zm0 13 6 12H26l6-12z' fill='%230f7f93'/%3E%3Ccircle cx='47' cy='46' r='4' fill='%23d97730'/%3E%3C/svg%3E">
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=20261105h">
+    <script>
+        // Site theme. DEFAULT is what visitors see; ?theme=name previews another one.
+        (function () {
+            var DEFAULT = 'midnight', themes = ['clarity', 'midnight', 'ember', 'aurora'], t = DEFAULT;
+            try {
+                var q = new URLSearchParams(location.search).get('theme');
+                if (q && themes.indexOf(q) > -1) { t = q; sessionStorage.setItem('al-theme', q); }
+                else if (themes.indexOf(sessionStorage.getItem('al-theme')) > -1) t = sessionStorage.getItem('al-theme');
+            } catch (e) {}
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
 </head>
 <body>
-    <nav class="navbar">
+    <a class="skip" href="#main">Skip to content</a>
+    <nav class="navbar" aria-label="Main">
         <div class="nav-container">
-            <a href="index.html" class="logo"><img src="assets/logo/anvira_labs_logo.png" alt="Anvira Labs" class="logo-img"></a>
-            <ul class="nav-menu">
+            <a href="index.html" class="logo"><img src="assets/logo/anvira_labs_logo.png" alt="Anvira Labs" class="logo-img" width="749" height="224"></a>
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
+                <li><a href="work.html">Clients</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="founder.html">Founder</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="nav-right">
                 <a href="contact.html" class="btn btn-primary">Book a Call</a>
-                <div class="hamburger"><span></span><span></span><span></span></div>
+                <button class="hamburger" type="button" aria-label="Menu" aria-controls="nav-menu" aria-expanded="false"><span></span><span></span><span></span></button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="bg-circuit"></div>
-        <div class="container hero-inner">
-            <div class="eyebrow" style="justify-content:center">TECH CONSULTING · AI ENABLEMENT · OPERATIONS AUTOMATION</div>
-            <h1 class="reveal in">Engineering partners for companies building what's <span class="grad-text">next.</span></h1>
-            <p class="lede reveal in">Anvira Labs architects platforms, automates operations, and ships custom software — with the discipline of an in-house team and the speed of a startup.</p>
-            <div class="hero-actions reveal in">
-                <a href="contact.html" class="btn btn-primary">Book a Free Call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-                <a href="services.html" class="btn btn-secondary">Explore Services</a>
+    <main id="main">
+        <section class="hero">
+            <div class="container">
+                <div class="eyebrow reveal">Technology consulting · Software · AI</div>
+                <h1 class="reveal">We build and fix the technology <span class="grad-text">growing companies run on.</span></h1>
+                <p class="lede reveal">Anvira Labs is a family-run Indian technology company. We design, build and run websites, apps, cloud platforms and AI features for businesses in India, Canada and the US, led by an engineer with 15+ years of hands-on experience.</p>
+                <div class="hero-actions reveal">
+                    <a href="contact.html" class="btn btn-primary">Book a free call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+                    <a href="work.html" class="btn btn-secondary">See our clients</a>
+                </div>
+                <div class="facts reveal">
+                    <div class="fact"><div class="fact-num">10</div><div class="fact-label">Clients served</div></div>
+                    <div class="fact"><div class="fact-num">3</div><div class="fact-label">Countries: India, Canada &amp; US</div></div>
+                    <div class="fact"><div class="fact-num">15+</div><div class="fact-label">Years founder experience</div></div>
+                    <div class="fact"><div class="fact-num">1 day</div><div class="fact-label">Reply time on enquiries</div></div>
+                </div>
             </div>
+        </section>
 
-            <div class="stat-strip reveal">
-                <div class="stat">
-                    <div class="stat-num" data-count="15" data-suffix="+">0+</div>
-                    <div class="stat-label">Years engineering leadership</div>
+        <section class="section alt clients-section" id="clients" aria-labelledby="clients-h">
+            <div class="container">
+                <div class="section-head center">
+                    <div class="eyebrow">Our clients</div>
+                    <h2 id="clients-h">Trusted by organisations in India, Canada and the US</h2>
+                    <p>From national staffing platforms to health apps, AI products and adventure tourism in Rishikesh.</p>
                 </div>
-                <div class="stat">
-                    <div class="stat-num" data-count="90" data-suffix="+">0+</div>
-                    <div class="stat-label">Engineers built &amp; led across teams</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-num" data-count="10" data-suffix="x">0x</div>
-                    <div class="stat-label">Kafka throughput gain delivered</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-num" data-count="99" data-suffix=".9%">0%</div>
-                    <div class="stat-label">Platform uptime track record</div>
-                </div>
+                <ul class="logo-wall reveal">
+                    <li><a class="logo-tile" href="https://zodiacbee.com" target="_blank" rel="noopener" title="ZodiacBee"><img src="assets/clients/zodiacbee.jpg" alt="ZodiacBee logo" loading="lazy"></a></li>
+                    <li><a class="logo-tile" href="https://www.teamlease.com/" target="_blank" rel="noopener" title="TeamLease"><img src="assets/clients/teamlease.jpg" alt="TeamLease logo" loading="lazy"></a></li>
+                    <li><a class="logo-tile" href="https://jobizo.com/" target="_blank" rel="noopener" title="Jobizo"><img src="assets/clients/jobizo.png" alt="Jobizo logo" loading="lazy"></a></li>
+                    <li><a class="logo-tile" href="https://bigplutolabs.com" target="_blank" rel="noopener" title="Big Pluto"><img src="assets/clients/bigpluto.png" alt="Big Pluto logo" loading="lazy"></a></li>
+                    <li><a class="logo-tile" href="https://thrillfactory.in/" target="_blank" rel="noopener" title="Thrill Factory"><img src="assets/clients/thrillfactory.png" alt="Thrill Factory logo" loading="lazy"></a></li>
+                    <li><a class="logo-tile" href="https://www.dronecraft.co.in/" target="_blank" rel="noopener" title="DroneCraft"><img src="assets/clients/dronecraft.png" alt="DroneCraft logo" loading="lazy"></a></li>
+                    <li><a class="logo-tile" href="https://www.befree.fit/" target="_blank" rel="noopener" title="BeFree"><img src="assets/clients/befree.jpeg" alt="BeFree logo" loading="lazy"></a></li>
+                    <li><a class="logo-tile" href="https://eco-junction.com/" target="_blank" rel="noopener" title="Eco Junction"><img src="assets/clients/ecojunction.jpg" alt="Eco Junction logo" loading="lazy"></a></li>
+                    <li><span class="logo-tile"><span class="logo-text">OGDomains</span></span></li>
+                    <li><a class="logo-tile" href="https://eternalvoice.net/" target="_blank" rel="noopener" title="Eternal Voice"><img src="assets/clients/eternalvoice.png" alt="Eternal Voice logo" loading="lazy"></a></li>
+                </ul>
+                <div class="section-foot center"><a class="link-arrow" href="work.html">See all clients and what they do <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
             </div>
+        </section>
 
-            <div class="hero-partners reveal" style="flex-wrap:wrap;gap:10px 28px">
-                <span></span>
-                <em style="font-style:normal">OnGrid</em>
-                <em style="font-style:normal">Dresma</em>
-                <em style="font-style:normal">Gigforce</em>
-                <em style="font-style:normal">SignCatch</em>
-                <em style="font-style:normal">Domino's</em>
-                <em style="font-style:normal">Lenskart</em>
-                <em style="font-style:normal">Samsung R&amp;D</em>
-                <span></span>
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div class="eyebrow">What we do</div>
+                    <h2>Four ways we move your technology forward</h2>
+                    <p>Hire us for one project or a long-term partnership. Either way, the same senior engineer who scopes the work stays accountable for it.</p>
+                </div>
+                <div class="grid-4">
+            <div class="card reveal">
+                <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></div>
+                <h3>Custom Software & Product Engineering</h3>
+                <p>Websites, web apps, mobile apps and SaaS platforms, designed and built end to end for the traffic you expect next year.</p>
+                <div class="tags"><span class="tag">Web & Mobile</span><span class="tag">SaaS</span><span class="tag">APIs</span></div>
+                <a class="link-arrow" href="services.html#custom-software">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
             </div>
-        </div>
-    </section>
+            <div class="card reveal">
+                <div class="card-icon orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="3.2"/></svg></div>
+                <h3>AI Enablement</h3>
+                <p>LLM and RAG features, AI chat and automation, taken from pilot to a measured production workflow.</p>
+                <div class="tags"><span class="tag">LLM</span><span class="tag">RAG</span><span class="tag">Automation</span></div>
+                <a class="link-arrow" href="services.html#ai">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17l6-6 4 4 6-8"/><path d="M14 7h6v6"/></svg></div>
+                <h3>Cloud, DevOps & Cost</h3>
+                <p>CI/CD, cloud infrastructure, observability and cloud-cost audits, so your team ships faster and spends less.</p>
+                <div class="tags"><span class="tag">AWS</span><span class="tag">CI/CD</span><span class="tag">FinOps</span></div>
+                <a class="link-arrow" href="services.html#cloud">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            </div>
+            <div class="card reveal">
+                <div class="card-icon orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 4.5a3.2 3.2 0 0 1 0 6.4M21 20c0-2.6-1.6-4.8-4-5.6"/></svg></div>
+                <h3>Fractional CTO & Advisory</h3>
+                <p>Senior technology leadership on demand: architecture, hiring, delivery and technical due diligence.</p>
+                <div class="tags"><span class="tag">Fractional CTO</span><span class="tag">Advisory</span><span class="tag">Due diligence</span></div>
+                <a class="link-arrow" href="services.html#cto">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- What we do -->
-    <section class="section alt">
-        <div class="container">
-            <div class="section-head center">
-                <div class="eyebrow" style="justify-content:center">WHAT WE DO</div>
-                <h2>Four ways we move your technology forward</h2>
+        <section class="section alt">
+            <div class="container">
+                <div class="section-head">
+                    <div class="eyebrow">How we work</div>
+                    <h2>A simple process, built for clarity</h2>
+                </div>
+        <ol class="steps">
+            <li class="step reveal"><div class="step-num">01</div><h3>Discover</h3><p>A free 30-minute call, then a short review of your product, systems and goals to find the highest-value starting point.</p></li>
+            <li class="step reveal"><div class="step-num">02</div><h3>Plan</h3><p>A clear scope, architecture, timeline and price before any code is written. No open-ended hourly surprises.</p></li>
+            <li class="step reveal"><div class="step-num">03</div><h3>Build</h3><p>Weekly releases you can see and test, with one point of contact and honest status updates.</p></li>
+            <li class="step reveal"><div class="step-num">04</div><h3>Support</h3><p>Documented, monitored systems handed over to your team, or ongoing support and improvements from ours.</p></li>
+        </ol>
             </div>
-            <div class="grid-4">
-                <div class="card reveal">
-                    <div class="card-index">01</div>
-                    <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.5 4.5l2 2M17.5 17.5l2 2M4.5 19.5l2-2M17.5 6.5l2-2"/></svg></div>
-                    <h3>AI Enablement</h3>
-                    <p>From pilot to production-grade AI.</p>
-                    <ul>
-                        <li>LLM &amp; RAG integration</li>
-                        <li>Generative AI product workflows</li>
-                        <li>AI-assisted engineering adoption</li>
-                    </ul>
-                </div>
-                <div class="card reveal">
-                    <div class="card-index">02</div>
-                    <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
-                    <h3>Operations Automation</h3>
-                    <p>Automate the plumbing so your team ships faster.</p>
-                    <ul>
-                        <li>CI/CD &amp; release engineering</li>
-                        <li>Cloud cost &amp; FinOps</li>
-                        <li>Observability &amp; incident reduction</li>
-                    </ul>
-                </div>
-                <div class="card reveal">
-                    <div class="card-index">03</div>
-                    <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-                    <h3>Custom Software</h3>
-                    <p>Architecture built to survive scale.</p>
-                    <ul>
-                        <li>Multi-tenant SaaS platforms</li>
-                        <li>Distributed systems &amp; microservices</li>
-                        <li>Cloud-native migrations</li>
-                    </ul>
-                </div>
-                <div class="card reveal">
-                    <div class="card-index">04</div>
-                    <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20.5a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9zM7 20.5a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9zM7 11.5V6a2 2 0 0 1 2-2h1M17 11.5V8a2 2 0 0 0-2-2h-1"/></svg></div>
-                    <h3>Tech Partnership</h3>
-                    <p>Embedded leadership, on demand.</p>
-                    <ul>
-                        <li>Fractional CTO / eng leadership</li>
-                        <li>Architecture &amp; code review</li>
-                        <li>Team building &amp; hiring</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Why Anvira -->
-    <section class="section">
-        <div class="container">
-            <div class="section-head">
-                <div class="eyebrow">WHY ANVIRA LABS</div>
-                <h2>Operators first. Advisors second.</h2>
-            </div>
-            <div class="grid-4">
-                <div class="mini-card reveal">
-                    <div class="mini-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div class="eyebrow">The team</div>
+                    <h2>A small team, senior where it counts</h2>
+                    <p>You work directly with the founders, not a sales layer.</p>
+                </div>
+            <div class="grid-2">
+                <article class="card team-card reveal" id="vipan">
+                    <img class="team-photo" src="assets/founder/vipan-kumar.jpg" alt="Vipan Kumar" width="112" height="112" loading="lazy">
                     <div>
-                        <h4>Built by operators, not advisors</h4>
-                        <p>Every recommendation is battle-tested in production, not slideware.</p>
+                        <div class="role">Founder · Technology Lead</div>
+                        <h3>Vipan Kumar</h3>
+                        <p>15+ years building software products, cloud platforms and engineering teams. Leads architecture and delivery on every Anvira Labs engagement.</p>
+                        <p class="muted">Hands-on with AWS, distributed systems, Java, Kafka, Kubernetes, Terraform and applied AI.</p>
+                        <div class="team-links">
+                            <a class="link-arrow" href="https://vipan.me" target="_blank" rel="noopener">vipan.me <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+                            <a class="link-arrow" href="https://www.linkedin.com/in/vipankverma/" target="_blank" rel="noopener">LinkedIn <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+                        </div>
+                    </div>
+                </article>
+                <article class="card team-card reveal" id="cofounder">
+                    <img class="team-photo" src="assets/founder/ritika-angrish.jpg" alt="Ritika Angrish" width="112" height="112" loading="lazy">
+                    <div>
+                        <div class="role">Co-founder · Engineering</div>
+                        <h3>Ritika Angrish</h3>
+                        <p>15 years in embedded and telecom software, building Layer 2 networking protocols such as G.8032 ring protection, CFM and QoS for carrier-grade switches, from design and development to resolving customer issues.</p>
+                        <p class="muted">Skilled in C, Linux, SNMP and Broadcom switching chipsets. Certified parenting coach. Alumna of Thapar Institute of Engineering and Technology, based in Gurugram.</p>
+                        <div class="team-links">
+                            <a class="link-arrow" href="mailto:ritika@anviralabs.com">ritika@anviralabs.com</a>
+                            <a class="link-arrow" href="https://www.linkedin.com/in/ritika-angrish/" target="_blank" rel="noopener">LinkedIn <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+                <div class="section-foot"><a class="link-arrow" href="about.html">About Anvira Labs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
+            </div>
+        </section>
+
+        <section class="section alt" id="experience">
+            <div class="container">
+                <div class="section-head">
+                    <div class="eyebrow">Where we've worked</div>
+                    <h2>Experience from full-time roles</h2>
+                    <p>Before and alongside Anvira Labs, the founders spent their careers as full-time engineers and engineering leaders at these companies. They were our employers, not Anvira Labs clients.</p>
+                </div>
+                <ul class="employer-wall">
+                    <li class="employer reveal"><div class="emp-logo "><img src="assets/employers/ciena.png" alt="Ciena logo" loading="lazy"></div><strong>Ciena</strong><span class="emp-sector">Optical & packet networking</span><span class="emp-who">Ritika · Embedded Software Engineer · 2014–present</span></li>
+                    <li class="employer reveal"><div class="emp-logo "><img src="assets/employers/ongrid.svg" alt="OnGrid logo" loading="lazy"></div><strong>OnGrid</strong><span class="emp-sector">Background-verification SaaS</span><span class="emp-who">Vipan · Associate Director of Engineering</span></li>
+                    <li class="employer reveal"><div class="emp-logo dark"><img src="assets/employers/dresma.png" alt="Dresma logo" loading="lazy"></div><strong>Dresma</strong><span class="emp-sector">AI product-content SaaS</span><span class="emp-who">Vipan · Technical Architect & Lead Engineering Manager</span></li>
+                    <li class="employer reveal"><div class="emp-logo "><img src="assets/employers/gigforce.png" alt="Gigforce logo" loading="lazy"></div><strong>Gigforce</strong><span class="emp-sector">Gig-workforce marketplace</span><span class="emp-who">Vipan · Senior Software Architect</span></li>
+                    <li class="employer reveal"><div class="emp-logo dark"><img src="assets/employers/signcatch.png" alt="SignCatch logo" loading="lazy"></div><strong>SignCatch</strong><span class="emp-sector">Retail-commerce platform</span><span class="emp-who">Vipan · Technology Head</span></li>
+                    <li class="employer reveal"><div class="emp-logo "><img src="assets/employers/dominos.png" alt="Domino's India logo" loading="lazy"></div><strong>Domino's India</strong><span class="emp-sector">Jubilant FoodWorks</span><span class="emp-who">Vipan · Lead Software Scientist</span></li>
+                    <li class="employer reveal"><div class="emp-logo "><img src="assets/employers/koovs.webp" alt="Koovs logo" loading="lazy"></div><strong>Koovs</strong><span class="emp-sector">Fashion e-commerce</span><span class="emp-who">Vipan · Technical Lead</span></li>
+                    <li class="employer reveal"><div class="emp-logo dark"><img src="assets/employers/lenskart.svg" alt="Lenskart logo" loading="lazy"></div><strong>Lenskart</strong><span class="emp-sector">Eyewear commerce</span><span class="emp-who">Vipan · Technical Lead</span></li>
+                    <li class="employer reveal"><div class="emp-logo "><img src="assets/employers/samsung-research.png" alt="Samsung RandD logo" loading="lazy"></div><strong>Samsung R&amp;D</strong><span class="emp-sector">Tizen browser &amp; graphics</span><span class="emp-who">Vipan · Software Scientist</span></li>
+                    <li class="employer reveal"><div class="emp-logo "><img src="assets/employers/aricent.png" alt="Aricent logo" loading="lazy"></div><strong>Aricent</strong><span class="emp-sector">Telecom software</span><span class="emp-who">Vipan &amp; Ritika · Software Engineers</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section tight">
+            <div class="container">
+                <div class="cta-band reveal">
+                    <h2>Have a project in mind?</h2>
+                    <p>Tell us what you're building or what's not working. We'll reply within one business day, and we'll tell you honestly if we're not the right fit.</p>
+                    <div class="hero-actions">
+                        <a href="contact.html" class="btn btn-light">Start a conversation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+                        <a href="https://calendly.com/contactvips/" class="btn btn-outline-light" target="_blank" rel="noopener">Book a call on Calendly</a>
                     </div>
                 </div>
-                <div class="mini-card reveal">
-                    <div class="mini-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></div>
-                    <div>
-                        <h4>Ships production systems, not decks</h4>
-                        <p>We hand over working software and measurable outcomes.</p>
-                    </div>
-                </div>
-                <div class="mini-card reveal">
-                    <div class="mini-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12.89 1.45l8 4A2 2 0 0 1 22 7.24v9.53a2 2 0 0 1-1.11 1.79l-8 4a2 2 0 0 1-1.79 0l-8-4a2 2 0 0 1-1.1-1.8V7.24a2 2 0 0 1 1.11-1.79l8-4a2 2 0 0 1 1.78 0z"/><polyline points="2.32 6.16 12 11 21.68 6.16"/><line x1="12" y1="22.76" x2="12" y2="11"/></svg></div>
-                    <div>
-                        <h4>Full-stack: architecture to on-call</h4>
-                        <p>One accountable partner across the whole delivery lifecycle.</p>
-                    </div>
-                </div>
-                <div class="mini-card reveal">
-                    <div class="mini-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-                    <div>
-                        <h4>A partner, not a vendor</h4>
-                        <p>We embed with your team and stay accountable to outcomes.</p>
-                    </div>
-                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Founder teaser -->
-    <section class="section alt">
-        <div class="container">
-            <div class="founder-teaser reveal">
-                <img src="assets/founder/vipan-kumar.jpg" alt="Vipan Kumar, Founder of Anvira Labs">
-                <div>
-                    <div class="eyebrow">THE OPERATOR BEHIND THE BUILD</div>
-                    <h2>Led by Vipan Kumar — 15 years turning ambitious ideas into production systems.</h2>
-                    <p>From building Lenskart's first tech stack to leading 21-to-30-person engineering orgs at OnGrid and Dresma, Vipan has shipped platforms serving 50,000+ businesses and 9M+ AI-processed images.</p>
-                    <a href="founder.html" class="btn btn-secondary">Meet the Founder <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section">
-        <div class="container">
-            <div class="cta-band reveal">
-                <h2>Ready to build what's next?</h2>
-                <p>Tell us about your platform, your bottleneck, or your idea — we'll tell you exactly how we'd approach it.</p>
-                <div class="hero-actions">
-                    <a href="contact.html" class="btn btn-primary">Book a Free Call</a>
-                    <a href="services.html" class="btn btn-secondary">See Our Services</a>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <img src="assets/logo/anvira_labs_logo.png" alt="Anvira Labs" class="logo-img">
-                    <p>A technology consulting and AI enablement partner — helping ambitious companies build, automate, and ship.</p>
+                    <img src="assets/logo/anvira_labs_logo.png" alt="Anvira Labs" class="logo-img" width="749" height="224" loading="lazy">
+                    <p>An Indian technology consulting and software company, working with clients in India, Canada and the US.</p>
                 </div>
-                <div class="footer-cols">
-                    <div class="footer-col">
-                        <h5>Company</h5>
-                        <a href="about.html">About</a>
-                        <a href="founder.html">Founder</a>
-                        <a href="services.html">Services</a>
-                    </div>
-                    <div class="footer-col">
-                        <h5>Get in touch</h5>
-                        <p>contact@anviralabs.com</p>
-                        <a href="https://linkedin.com/in/vipankverma" target="_blank" rel="noopener">LinkedIn</a>
-                        <p>Brampton, Ontario, Canada</p>
-                        <p>Gurgaon, India</p>
-                    </div>
+                <div class="footer-col">
+                    <h5>Company</h5>
+                    <a href="services.html">Services</a>
+                    <a href="work.html">Clients</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Get in touch</h5>
+                    <a href="mailto:contact@anviralabs.com">contact@anviralabs.com</a>
+                    <a href="mailto:vipan@anviralabs.com">vipan@anviralabs.com</a>
+                    <a href="mailto:ritika@anviralabs.com">ritika@anviralabs.com</a>
+                    <a href="https://calendly.com/contactvips/" target="_blank" rel="noopener">Book a call on Calendly</a>
+                    <a href="https://www.linkedin.com/in/vipankverma/" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Offices</h5>
+                    <p>Gurgaon, India</p>
+                    <p>Brampton, Ontario, Canada</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 Anvira Labs. All rights reserved.</p>
-                <div class="footer-bottom-links">
-                    <a href="contact.html">Contact</a>
-                    <a href="founder.html">Founder</a>
-                </div>
+                <p>&copy; 2026 Anvira Labs. All rights reserved.</p>
+                <p>Founder profile: <a href="https://vipan.me" target="_blank" rel="noopener">vipan.me</a></p>
             </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
+    <script src="script.js?v=20261105h"></script>
 </body>
 </html>
