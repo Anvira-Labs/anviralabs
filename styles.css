@@ -82,7 +82,11 @@ h3 { font-size: 1.2rem; letter-spacing: -.01em; }
 .navbar { position: sticky; top: 0; z-index: 100; background: var(--nav-bg); backdrop-filter: saturate(160%) blur(12px); -webkit-backdrop-filter: saturate(160%) blur(12px); border-bottom: 1px solid transparent; transition: border-color .2s; }
 .navbar.scrolled { border-bottom-color: var(--line); }
 .nav-container { max-width: var(--container); margin: 0 auto; padding: 14px 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px; position: relative; }
-.logo-img { height: clamp(30px, 3.4vw, 38px); width: auto; }
+.logo { display: inline-flex; align-items: center; }
+.logo-img { height: clamp(34px, 3.6vw, 44px); width: auto; }
+.logo-on-light { display: none; }
+[data-theme="clarity"] .logo-on-dark, [data-theme="aurora"] .logo-on-dark { display: none; }
+[data-theme="clarity"] .logo-on-light, [data-theme="aurora"] .logo-on-light { display: block; }
 .nav-menu { display: flex; gap: 6px; }
 .nav-menu a { display: block; padding: 8px 14px; border-radius: 999px; font-weight: 500; font-size: .96rem; color: var(--ink-80); transition: background .2s, color .2s; }
 .nav-menu a:hover { background: var(--surface); color: var(--ink); }
@@ -251,7 +255,7 @@ a.client-card:hover { transform: translateY(-3px); box-shadow: 0 14px 34px -18px
 /* ---------- Footer ---------- */
 .footer { background: var(--band); color: rgba(255,255,255,.72); padding: 64px 0 28px; margin-top: clamp(64px, 9vw, 112px); }
 .footer-top { display: grid; grid-template-columns: minmax(0, 1.3fr) repeat(3, minmax(0, 1fr)); gap: 32px; }
-.footer-brand .logo-img { height: 30px; background: #fff; padding: 8px 12px; border-radius: 8px; box-sizing: content-box; }
+.footer-brand .logo-img { height: 46px; }
 .footer-brand p { margin-top: 16px; max-width: 34ch; font-size: .94rem; }
 .footer h5 { font-family: var(--mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #fff; font-weight: 500; margin-bottom: 14px; }
 .footer-col a, .footer-col p { display: block; font-size: .94rem; margin-bottom: 8px; overflow-wrap: anywhere; }
@@ -359,8 +363,7 @@ a.client-card:hover { transform: translateY(-3px); box-shadow: 0 14px 34px -18px
 [data-theme="aurora"] .card, [data-theme="aurora"] .employer, [data-theme="aurora"] .record .fact { backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 10px 30px -20px rgba(20,21,48,.35); }
 [data-theme="aurora"] .cta-band::after { background: radial-gradient(closest-side, rgba(109,93,252,.55), transparent 70%); }
 
-/* Dark themes: keep the dark-text logo readable */
-[data-theme="midnight"] .navbar .logo-img, [data-theme="ember"] .navbar .logo-img { background: #fff; padding: 5px 10px; border-radius: 8px; box-sizing: content-box; height: clamp(24px, 2.8vw, 30px); }
+/* Dark themes */
 [data-theme="midnight"] .field input, [data-theme="midnight"] .field select, [data-theme="midnight"] .field textarea,
 [data-theme="ember"] .field input, [data-theme="ember"] .field select, [data-theme="ember"] .field textarea { color-scheme: dark; }
 [data-theme="midnight"] .form-status:not(.is-success), [data-theme="ember"] .form-status:not(.is-success) { background: #3a1a12; color: #ffd9cc; border-color: #6b2e1d; }
