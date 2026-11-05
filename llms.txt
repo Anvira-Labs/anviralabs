@@ -9,7 +9,7 @@
 - Fractional CTO and advisory: technology roadmap, hiring and team structure, architecture and code reviews, technical due diligence. Typically 1–2 days a week. https://www.anviralabs.com/services.html#cto
 
 ## Clients
-ZodiacBee (Canada), TeamLease (India), Jobizo (India), Big Pluto (India), Thrill Factory (Rishikesh, India), DroneCraft (Rishikesh, India), BeFree, Eco Junction, Eternal Voice (Maryland, USA), OGDomains (Canada). https://www.anviralabs.com/work.html
+ZodiacBee (Canada), TeamLease (India), Jobizo (India), Big Pluto (India), Thrill Factory (Rishikesh, India), DroneCraft (Rishikesh, India), BeFree, Eco Junction, Eternal Voice (Maryland, USA), OGDomains (Canada, premium domain marketplace: https://anvira-labs.github.io/ogdomains/). https://www.anviralabs.com/work.html
 
 ## Founders
 - Vipan Kumar, Founder and Technology Lead: 15+ years building software products, cloud platforms and engineering teams. https://vipan.me/
