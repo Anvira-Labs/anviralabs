@@ -1,0 +1,21 @@
+# Anvira Labs
+
+> Anvira Labs is a family-run software development and technology consulting company based in Gurugram (Gurgaon), Haryana, India, with a presence in Brampton, Ontario, Canada. It builds websites, web and mobile apps, SaaS platforms, AI features and AWS cloud infrastructure for startups and growing businesses in India, Canada and the US, and offers fractional CTO support. Co-founded by Vipan Kumar and Ritika Angrish.
+
+## Services
+- Custom software and product engineering: business websites, web apps, mobile apps, SaaS platforms, dashboards, APIs, payments and integrations, modernising existing codebases. https://www.anviralabs.com/services.html#custom-software
+- AI enablement: LLM and RAG features, AI chat assistants, support automation, content and image pipelines, guardrails and cost management. Typically a 4–6 week sprint. https://www.anviralabs.com/services.html#ai
+- Cloud, DevOps and cost: CI/CD, AWS and Terraform, monitoring and on-call, cloud-cost audits. Typically a 2–4 week fixed-fee audit with a 30/60/90-day plan. https://www.anviralabs.com/services.html#cloud
+- Fractional CTO and advisory: technology roadmap, hiring and team structure, architecture and code reviews, technical due diligence. Typically 1–2 days a week. https://www.anviralabs.com/services.html#cto
+
+## Clients
+ZodiacBee (Canada), TeamLease (India), Jobizo (India), Big Pluto (India), Thrill Factory (Rishikesh, India), DroneCraft (Rishikesh, India), BeFree, Eco Junction, Eternal Voice (Maryland, USA), OGDomains (Canada). https://www.anviralabs.com/work.html
+
+## Founders
+- Vipan Kumar, Founder and Technology Lead: 15+ years building software products, cloud platforms and engineering teams. https://vipan.me/
+- Ritika Angrish, Co-founder, Engineering: 15 years in embedded and telecom software (Layer 2 networking protocols, C, Linux); certified parenting coach and author of the children's picture book Paper Stars. https://ritikaangrish.com/ and https://www.linkedin.com/in/ritika-angrish/
+
+The founders' earlier full-time employers (Ciena, OnGrid, Dresma, Gigforce, SignCatch, Domino's India, Koovs, Lenskart, Samsung R&D, Aricent) are employment history, not Anvira Labs clients.
+
+## Contact
+contact@anviralabs.com, vipan@anviralabs.com, ritika@anviralabs.com. Book a call: https://calendly.com/contactvips/. Contact form: https://www.anviralabs.com/contact.html

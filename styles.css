@@ -372,3 +372,12 @@ a.client-card:hover { transform: translateY(-3px); box-shadow: 0 14px 34px -18px
 .theme-switch { position: fixed; right: 16px; bottom: 16px; z-index: 300; display: flex; gap: 6px; padding: 6px; background: #10131a; border-radius: 999px; box-shadow: 0 10px 30px -10px rgba(0,0,0,.5); }
 .theme-switch button { padding: 8px 14px; border-radius: 999px; color: #fff; font-size: .85rem; font-weight: 600; }
 .theme-switch button[aria-pressed="true"] { background: #fff; color: #10131a; }
+
+/* FAQ (services page) */
+.faq { display: grid; gap: 12px; max-width: 880px; }
+.faq-item { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 0 22px; }
+.faq-item summary { cursor: pointer; list-style: none; padding: 18px 28px 18px 0; font-weight: 600; font-size: 1.05rem; position: relative; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-family: var(--mono); font-size: 1.3rem; color: var(--teal); }
+.faq-item[open] summary::after { content: "−"; }
+.faq-item p { padding: 0 0 20px; color: var(--ink-80); }
