@@ -254,7 +254,7 @@ a.client-card:hover { transform: translateY(-3px); box-shadow: 0 14px 34px -18px
 
 /* ---------- Footer ---------- */
 .footer { background: var(--band); color: rgba(255,255,255,.72); padding: 64px 0 28px; margin-top: clamp(64px, 9vw, 112px); }
-.footer-top { display: grid; grid-template-columns: minmax(0, 1.3fr) repeat(3, minmax(0, 1fr)); gap: 32px; }
+.footer-top { display: grid; grid-template-columns: minmax(0, 1.3fr) repeat(4, minmax(0, 1fr)); gap: 32px; }
 .footer-brand .logo-img { height: 46px; }
 .footer-brand p { margin-top: 16px; max-width: 34ch; font-size: .94rem; }
 .footer h5 { font-family: var(--mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #fff; font-weight: 500; margin-bottom: 14px; }
