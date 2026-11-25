@@ -1,6 +1,6 @@
 # Anvira Labs
 
-> Anvira Labs is a family-run software development and technology consulting company based in Gurugram (Gurgaon), Haryana, India, with a presence in Brampton, Ontario, Canada. It builds websites, web and mobile apps, SaaS platforms, AI features and AWS cloud infrastructure for startups and growing businesses in India, Canada and the US, and offers fractional CTO support. Co-founded by Vipan Kumar and Ritika Angrish.
+> Anvira Labs is a product engineering and technology consulting company based in Gurugram (Gurgaon), Haryana, India, with a presence in Brampton, Ontario, Canada. It builds websites, web and mobile apps, SaaS platforms, AI features and AWS cloud infrastructure for startups and growing businesses in India, Canada and the US, and offers fractional CTO support. Co-founded by Vipan Kumar and Ritika Angrish.
 
 ## Services
 - Custom software and product engineering: business websites, web apps, mobile apps, SaaS platforms, dashboards, APIs, payments and integrations, modernising existing codebases. https://www.anviralabs.com/services.html#custom-software
